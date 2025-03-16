@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "@tensorflow-models/posenet": "^2.2.2",
+    "@tensorflow/tfjs": "^4.22.0"
+  }
+}

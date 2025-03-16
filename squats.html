@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GymAI - Squats</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Ensures canvas overlaps video */
+        .video-container {
+            position: relative;
+            display: inline-block;
+        }
+        #canvas {
+            position: absolute;
+            top: 0;
+            left: 0;
+            pointer-events: none; /* So clicks go to the video */
+        }
+    </style>
+</head>
+<body>
+    <div class="title center">
+        <h1>Squats Counter</h1>
+    </div>
+    
+    
+    <div class="buttons center">     
+
+        <button id="cam" >Open Camera</button>
+        <input type="file" id="videoInput" accept="video/*" style="display: none;">
+        <button id="selectVideo" class="select-video">Select a Video</button>
+
+        <a href="index.html">            
+            <button >Back</button>
+        </a>
+
+    </div>
+
+    <div id="vid-con" class="vid-container center">        
+        <div class="video-container">
+            <video id="video" class="vid-player" width="640" height="360"></video>
+            <canvas id="canvas" width="640" height="360"></canvas>
+        </div>
+    </div>
+
+    <div class="center">
+
+        
+        <div id="str-btn" class="start-button buttons center">
+            <button id="start" >Start Tracking</button>
+            <button id="Track-P" >Hide Tracking Points</button>
+        </div>
+    </div>
+
+    <div id="curr-count" class="rep-text center">        
+        <h2>Reps: <span id="repsCount">0</span></h2>
+        <h2>Sets: <span id="setsCount">0</span></h2>
+    </div>
+
+    <div id="summ" class="summary center">  
+        <button id="p-again">Play Again</button> 
+        <p id="summ-text"><span>Summary: </span> You have Performed 50 Reps and 1 Sets in this video, Carry on!!</p>
+
+
+        <!-- <h3 class="color">Reps: <span id="repsCount">0</span></h3> -->
+    </div>
+
+
+    <!-- <div class="buttons center"> -->
+        <!-- <a href="/home.html">            
+            <button >Back</button>
+        </a>
+
+    </div> -->
+
+
+
+    <!-- <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script> -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/posenet"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/pose"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script>
+
+    <script src="squats.js"></script>
+
+</body>
+</html>
+
+
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Push-up Counter</title>
+</head>
+<body>
+    <h1>Push-up Counter</h1>
+    
+    <input type="file" id="videoInput" accept="video/*" style="display: none;">
+    <button id="selectVideo">Select a Video</button>
+    
+    <video id="video" width="640" height="480" controls></video>
+    <canvas id="canvas" width="640" height="480"></canvas>
+
+    <h2>Reps Count: <span id="repsCount">0</span></h2>
+
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/posenet"></script>
+    <script src="script.js"></script>
+</body>
+</html> -->

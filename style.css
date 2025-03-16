@@ -1,0 +1,339 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+
+:root {
+    --primary-back-color: #000011;
+    --primary-fore-color: #b55de9;
+    --font-color: #fff;
+    --font-size: 16px;
+    --border-width: 2px;
+
+
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins',sans-serif;
+
+    /* transition: color .3s ease; */
+    transition: background-color .5s ease;
+
+    /* cursor: url(img/mc24.ico), auto; */
+}
+
+html {
+    scroll-behavior: smooth;
+
+    -ms-user-select: none;
+        -moz-user-select: none;
+        -webkit-user-select: none;
+        user-select: none;
+}
+
+body{
+    background: var(--primary-back-color);
+    color: var(--font-color);
+    transition: all .3s ease;
+
+    text-decoration: none;
+
+
+}
+
+a {
+    text-decoration: none;
+
+    color: white;
+}
+
+/* ================================= */
+/* scrollbar */
+::-webkit-scrollbar {
+    width: 2px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--primary-back-color); 
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--primary-fore-color); 
+    border-radius: 5px; 
+}
+
+#p-test::-webkit-scrollbar {
+    width: 3px;
+  
+}
+
+#p-test::-webkit-scrollbar-track {
+    background: transparent;
+    border-radius: 10px;
+}
+
+#p-test::-webkit-scrollbar-thumb {
+    background: grey;
+    border-radius: 20px; 
+}
+
+
+.center{
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+
+    flex-wrap: wrap;
+
+
+    
+
+
+}
+
+#canvas {
+    transition: all .2s ease;
+}
+
+
+.title {
+    /* background-color: red; */
+    color: var(--primary-fore-color);
+
+
+    height: 60px;
+}
+
+.ex-list{
+    /* background-color: blue; */
+
+    /* margin-top: 10px; */
+    width: 100%;
+    height: auto;
+
+    padding: 20px 210px;
+
+
+
+
+}
+
+
+.mirrored {
+    -o-transform: scaleX(-1);
+    -webkit-transform: scaleX(-1);
+    -moz-transform: scaleX(-1);
+    transform: scaleX(-1);
+}
+
+.today {
+    margin-top: 20px;
+}
+
+.today p {
+    font-size: 1.2rem;
+    font-weight: 200;
+
+    /* color: var(--primary-fore-color); */
+}
+
+.excercises{
+    min-width: 290px;
+    min-height: 250px;
+    margin: 20px 20px;
+
+    background-color: var(--primary-fore-color);
+
+
+    border-radius: 15%;
+
+    transition: all .3s ease;
+
+
+    
+
+}
+
+.excercises p {
+
+    font-size: 2rem;
+    font-weight: 500;
+
+    transition: all .1s ease;
+
+}
+
+.excercises:hover > p {
+
+    font-size: 2.2rem;
+    /* font-weight: 100; */
+
+}
+
+.excercises:hover {
+    transform: scale(105%);
+    box-shadow: 0px 0px 50px 1px var(--primary-fore-color);
+
+    background-color: var(--primary-back-color);
+
+    color: var(--primary-fore-color);
+
+    /* font-weight: 200; */
+
+ 
+    
+}
+
+.buttons{
+    /* background-color: red; */
+
+
+    padding: 30px 550px;
+}
+
+button {
+    border: none;
+
+    background-color: var(--primary-fore-color);
+    padding: 10px 30px;
+     
+    border-radius: 17px;
+}
+
+.select-video{
+    /* background-color: red; */
+    width: 100;
+}
+
+
+.vid-container{
+    /* background-color: red; */
+    /* width: 640px; */
+    /* width: auto; */
+    /* height: auto; */
+
+    /* display : flex; */
+
+
+}
+
+#vid-con {
+    display: none;
+    /* background-color: blue; */
+
+    /* height: ; */
+}
+
+.rep-text {
+    /* background-color: blue; */
+
+    margin-top: 15px;
+
+    flex-direction: column-reverse;
+
+}
+
+.vid-player {
+    border-radius: 10px;
+    border: 1px solid var(--primary-fore-color);
+
+    box-shadow: 0px 0px 20px 1px var(--primary-fore-color);
+    /* background-color: red; */
+
+    /* background-color: blue; */
+}
+
+.inner-vid-con {
+    /* position: absolute; */
+    /* height: 360px; */
+    /* width: 640px; */
+}
+
+video, canvas {
+
+    border-radius: 20px;
+    z-index: 2;
+
+    /* background-color: red; */
+    display: flex;
+
+    /* height:100%; */
+    /* height:auto; */
+
+    /* width: 100px; */
+
+}
+
+canvas {
+    /* position: absolute; */
+    /* display: none; */
+
+    object-fit: cover;
+}
+
+
+.start-button {
+    margin-top: 20px;
+    padding: 0;
+    /* background-color: red; */
+
+    width: 80%;
+
+    /* justify-content: center; */
+
+
+    display: none;
+
+    z-index: 1;
+}
+
+.start-button button {
+    /* margin: 0 30px; */
+}
+
+.color{
+    color: var(--primary-fore-color);
+}
+
+
+.summary {
+    margin-top: 5px;
+    display: none;
+
+    flex-direction: column-reverse;
+
+
+    
+}
+
+.summary button {
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.summary h3 {
+    font-size: 3rem;
+    font-weight: 500;
+}
+
+button {
+    cursor: pointer;
+}
+
+#summ-text {
+    font-size: 1.3rem;
+}
+
+#summ-text span {
+    font-weight: 500;
+    color: var(--primary-fore-color);
+}
+
+.zind{
+    /* background-color: red; */
+    z-index: 999;
+}
